@@ -14,7 +14,7 @@ app.use(cors());
 app.use(userRouter);
 app.use(feedbackRouter);
 
-const server = app.listen(3003, () => {
+const server = app.listen(3000, () => {
     if(server) {
         const address = server.address() as AddressInfo;
         console.log(`Server is running in http://localhost: ${address.port}`);
