@@ -71,5 +71,31 @@ export class FeedbackController {
             });
         }
     }
+
+    public async updateFeedback(req: Request, res: Response) {
+        try {
+
+            const token = req.headers.authorization as string;
+
+            const dataController = {
+                token: token,
+                improve: req.body.improve,
+                keep: req.body.keep,
+                suggestions: req.body.suggestions,
+                final_fb: req.body.final_fb,
+                id_user: req.params.id as string
+            }
+
+            await FeedbackController.FEEDBACKBUSINESS.updateFeedback(dataController);
+
+            res.status(200).send({
+                message: "Update Feedback"
+            });
+        } catch (error) {
+            res.status(400).send({
+                message: error.message
+            });
+        }
+    }
 }
 

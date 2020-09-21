@@ -58,4 +58,23 @@ export class FeedbackBusiness {
         
         return result;
     }
+
+    public async updateFeedback(dataController: any) {
+        if(!dataController){
+            throw new Error("Invalid Error");
+        }
+        
+        const dataBusiness = {
+            improve: dataController.improve,
+            keep: dataController.keep,
+            suggestions: dataController.suggestions,
+            final_fb: dataController.final_fb,
+            id: dataController.id_user
+        }
+
+        const result = await this.feedbackDatabase.updateFeedback(dataBusiness);
+
+        return result;
+
+    }
 }

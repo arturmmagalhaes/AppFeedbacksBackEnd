@@ -51,4 +51,17 @@ export class FeedbackDatabase extends BaseDatabase {
         }
     }
 
+    public async updateFeedback (data: any){
+        try{
+            await super.connection().raw(`
+                UPDATE ${FeedbackDatabase.TABLE_NAME}
+                SET improve = "${data.improve}", keep = "${data.keep}", suggestions = "${data.suggestions}", final_fb = "${data.final_fb}"
+                WHERE id = "${data.id}";
+        `);
+        } catch(error) {
+            throw new Error(error.message);
+        } finally {
+            await super.destroyConnection();
+        }
+    }
 }
