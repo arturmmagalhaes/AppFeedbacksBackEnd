@@ -14,7 +14,7 @@ app.use(express_1.default.json());
 app.use(cors_1.default());
 app.use(UserRouter_1.userRouter);
 app.use(FeedbackRouter_1.feedbackRouter);
-const server = app.listen(3003, () => {
+const server = app.listen(3000, () => {
     if (server) {
         const address = server.address();
         console.log(`Server is running in http://localhost: ${address.port}`);
