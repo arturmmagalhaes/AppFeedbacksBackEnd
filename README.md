@@ -12,7 +12,7 @@
 
 # Executar a aplicação sem mysql na nuvem
 
-  baixar o mysql
+    baixar o mysql
   
 ``` 
   git clone https://github.com/arturmmagalhaes/AppFeedbacksBackEnd.git
