@@ -21,7 +21,7 @@
   
   npm install
   
-  alterar dados de conexão na classe BaseDatabase
+  criar .env com dados da conexão de acordo com as variáveis da classe BaseDatabase
   
   npm run migration
   
