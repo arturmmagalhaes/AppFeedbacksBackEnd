@@ -21,6 +21,8 @@
   
   npm install
   
+  alterar dados de conexão na classe BaseDatabase
+  
   npm run migration
   
   npm start
