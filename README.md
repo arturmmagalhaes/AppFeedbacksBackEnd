@@ -7,6 +7,8 @@
   
   npm install
   
+  criar arquivo .env
+  
   npm start
 ```
 
